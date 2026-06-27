@@ -1,0 +1,195 @@
+@import 'tailwindcss';
+
+/* Class-based dark mode: toggling `.dark` on <html> flips the theme */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /*
+   * Brand: deep blue-black (the main color across the whole UI).
+   * Token names stay `violet-*` as stable aliases so component classes
+   * don't churn — the *values* are a navy/blue-black scale.
+   * 100–300 are light (text on dark surfaces); 500–900 are dark
+   * (solid buttons + emphasis text on light surfaces).
+   */
+  --color-violet-50: #eef1f7;
+  --color-violet-100: #d7dded;
+  --color-violet-200: #afbfd6;
+  --color-violet-300: #7e93b3;
+  --color-violet-400: #455f8a;
+  --color-violet-500: #1b2a47; /* primary blue-black */
+  --color-violet-600: #15233c;
+  --color-violet-700: #101a2e;
+  --color-violet-800: #0b1322;
+  --color-violet-900: #070d18;
+
+  /* Accent: clean orange (the pop / CTA color). `lime-accent` is a legacy alias. */
+  --color-lime-accent: #f97316;
+  --color-lime-accent-dark: #ea670c;
+
+  --color-ink: #0b1220; /* blue-black for outlines + text */
+
+  --font-sans:
+    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display:
+    'Poppins', 'Inter', system-ui, sans-serif;
+
+  --radius-pill: 9999px;
+}
+
+:root {
+  color-scheme: light;
+}
+
+:root.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Firefox custom scrollbar (thumb / track) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-violet-400) transparent;
+}
+:root.dark html,
+:root.dark {
+  scrollbar-color: var(--color-violet-500) transparent;
+}
+
+/* WebKit/Chromium custom scrollbar, themed to the brand */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--color-violet-400),
+    var(--color-violet-600)
+  );
+  border: 3px solid transparent;
+  border-radius: 9999px;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    var(--color-violet-500),
+    var(--color-lime-accent-dark)
+  );
+  background-clip: padding-box;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    180deg,
+    var(--color-violet-400),
+    var(--color-violet-700)
+  );
+  background-clip: padding-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @apply bg-white text-slate-600 dark:bg-[#0a0f1a] dark:text-slate-300;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Dotted-grid background used across hero/illustration panels */
+.grid-dots {
+  background-image: radial-gradient(
+    currentColor 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+
+/* Reusable display heading with the mixed-weight look from the mockups */
+.heading-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  @apply font-medium text-ink dark:text-white;
+}
+
+.heading-footer {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* Matte "frosted glass" surface. Pairs with content layered over the
+   particle field / gradients. Use .glass; .glass-strong is more opaque. */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.glass-strong {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+.dark .glass {
+  background: rgba(20, 30, 52, 0.45);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.dark .glass-strong {
+  background: rgba(12, 18, 32, 0.7);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Infinite horizontal carousel. Render the items twice; -50% loops seamlessly. */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+  will-change: transform;
+}
+.marquee-group:hover .animate-marquee {
+  animation-play-state: paused;
+}
+/* Fade the carousel edges into the background */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+
+/* Respect users who prefer reduced motion (Motion also reads this) */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+}

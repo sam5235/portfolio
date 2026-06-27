@@ -1,0 +1,33 @@
+{
+  "name": "Samiya Hamid",
+  "role": "Senior Software Engineer",
+  "headline": "React · Next.js · Vue · Nuxt · AI Developer",
+  "tagline": "I turn creative ideas into robust, scalable web experiences.",
+  "intro": "I'm a passionate, detail-oriented full stack developer with proven expertise building dynamic, responsive, and user-friendly web applications. With a focus on React.js and Vue.js, I transform creative ideas into robust and scalable digital experiences.",
+  "about": "With a keen eye for detail and a passion for delivering quality work, I'm confident handling any development project. I stay up to date with the latest technologies and techniques to deliver exceptional results every time — from front-end architecture and state management to performance and polished UI/UX.",
+  "location": "Addis Ababa, Ethiopia · Remote",
+  "email": "samiya@example.com",
+  "cvUrl": "/cv.pdf",
+  "calendlyUrl": "https://calendly.com/your-handle/30min",
+  "formspreeEndpoint": "https://formspree.io/f/your-form-id",
+  "stats": [
+    { "label": "Years experience", "value": "2.5+" },
+    { "label": "Projects delivered", "value": "10+" },
+    { "label": "Upwork rating", "value": "5.0" },
+    { "label": "Job success", "value": "100%" }
+  ],
+  "whyMe": [
+    "Clean, maintainable code — efficient, scalable, testable, and easy to read.",
+    "Clear communication — prompt responses and updates throughout the project.",
+    "Timely, high-quality delivery — meeting deadlines without compromising quality.",
+    "Client-centric approach — dedicated to understanding your specific requirements.",
+    "Innovative solutions — exploring new technologies for cutting-edge results.",
+    "Strong problem-solving skills to tackle complex requirements."
+  ],
+  "socials": [
+    { "name": "GitHub", "url": "https://github.com/sam5235", "icon": "github" },
+    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/samiya-hamid-149115224/", "icon": "linkedin" },
+    { "name": "Upwork", "url": "https://www.upwork.com/freelancers/~0123dda34004da49e6", "icon": "upwork" },
+    { "name": "Email", "url": "mailto:samiya@example.com", "icon": "mail" }
+  ]
+}

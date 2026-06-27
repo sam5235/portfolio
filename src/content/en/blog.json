@@ -1,0 +1,44 @@
+[
+  {
+    "slug": "building-scalable-component-architectures",
+    "title": "Building Scalable Component Architectures",
+    "excerpt": "How I structure reusable, maintainable component systems in React and Vue.",
+    "date": "2026-05-12",
+    "readingTime": "6 min read",
+    "tags": ["Frontend", "Architecture"],
+    "cover": "linear-gradient(135deg, #1b2a47 0%, #34507f 100%)",
+    "content": [
+      "A scalable frontend starts with clear component boundaries. Small, focused components compose into features without becoming tangled.",
+      "Co-locate state with the components that use it, and lift it only when genuinely shared. Predictable data flow keeps large apps maintainable.",
+      "Design systems pay off fast: a shared set of primitives means new screens are assembled, not rebuilt."
+    ]
+  },
+  {
+    "slug": "state-management-without-the-headache",
+    "title": "State Management Without the Headache",
+    "excerpt": "Choosing between Redux Toolkit, Vuex, and local state — and when each fits.",
+    "date": "2026-03-28",
+    "readingTime": "7 min read",
+    "tags": ["React", "State"],
+    "cover": "linear-gradient(135deg, #f97316 0%, #1b2a47 100%)",
+    "content": [
+      "Most state is local. Reach for a global store only when data is truly shared across distant parts of the tree.",
+      "Redux Toolkit removes most of the old boilerplate; Vuex (or Pinia) does the same in the Vue world.",
+      "Keep server state separate from UI state — they have different lifecycles and caching needs."
+    ]
+  },
+  {
+    "slug": "shipping-fast-responsive-uis",
+    "title": "Shipping Fast, Responsive UIs",
+    "excerpt": "Practical performance and UX wins that make apps feel instant.",
+    "date": "2026-01-15",
+    "readingTime": "5 min read",
+    "tags": ["Performance", "UI/UX"],
+    "cover": "linear-gradient(135deg, #070d18 0%, #34507f 100%)",
+    "content": [
+      "Performance is a feature. Measure first, then optimize the parts users actually feel.",
+      "Lazy-load below-the-fold work, keep bundles lean, and avoid layout shift for a calm, fast experience.",
+      "Responsive, accessible interfaces aren't extra — they're the baseline for a quality product."
+    ]
+  }
+]

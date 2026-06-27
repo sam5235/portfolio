@@ -1,0 +1,113 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "experience": "Experience",
+    "blog": "Blog",
+    "contact": "Contact",
+    "downloadCv": "Download CV"
+  },
+  "actions": {
+    "viewMyWork": "View My Work",
+    "allProjects": "All Projects",
+    "bookACall": "Book a Call",
+    "startProject": "Start a Project",
+    "sendMessage": "Send Message",
+    "sending": "Sending…",
+    "workWithMe": "Work With Me",
+    "backHome": "Back Home",
+    "seeProjects": "See Projects",
+    "backToBlog": "Back to Blog",
+    "liveDemo": "Live Demo",
+    "code": "Code",
+    "backToTop": "Back to top",
+    "preview": "Preview"
+  },
+  "hero": {
+    "greeting": "Hi, I'm {{name}}.",
+    "tail": "building delightful web apps.",
+    "downloadCv": "Download CV"
+  },
+  "tech": {
+    "eyebrow": "Tech Stack",
+    "title": "Tech Stacks I Work With",
+    "subtitle": "A pragmatic, modern tech-stacks for shipping production software end to end."
+  },
+  "services": {
+    "eyebrow": "Services I Provide",
+    "title": "What I Offer",
+    "subtitle": "From first commit to production, I help teams and founders turn ideas into reliable software."
+  },
+  "featured": {
+    "eyebrow": "Selected Work",
+    "title": "Featured Projects",
+    "subtitle": "A few recent builds from client work and freelance contracts."
+  },
+  "testimonials": {
+    "eyebrow": "Testimonials",
+    "title": "What Clients Say",
+    "subtitle": "Long-term relationships built on clear communication and dependable delivery."
+  },
+  "projectsPage": {
+    "eyebrow": "Portfolio",
+    "title": "Projects & case studies",
+    "subtitle": "A collection of work spanning client engagements, freelance contracts, and personal projects.",
+    "empty": "No projects in this category yet.",
+    "filters": {
+      "All": "All",
+      "Upwork": "Upwork",
+      "Client": "Client",
+      "Personal": "Personal",
+      "Open Source": "Open Source"
+    }
+  },
+  "experiencePage": {
+    "eyebrow": "Career",
+    "title": "Professional Experience",
+    "subtitle": "Building software across full-time roles, contracts, and freelance work.",
+    "downloadFullCv": "Download full CV",
+    "education": "Education",
+    "certifications": "Certifications"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's work together",
+    "subtitle": "Have a project, a role, or just a question? Send a message or book a call — I usually reply within a day.",
+    "getInTouch": "Get in touch",
+    "findMeOnline": "Find me online",
+    "preferToTalkTitle": "Prefer to talk?",
+    "preferToTalkText": "Grab a 30-minute slot and let's chat about your project.",
+    "name": "Name",
+    "namePlaceholder": "Jane Doe",
+    "email": "Email",
+    "emailPlaceholder": "jane@company.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Project inquiry",
+    "message": "Message",
+    "messagePlaceholder": "Tell me about your project…",
+    "success": "Thanks! I'll be in touch.",
+    "error": "Something went wrong. Email me directly at {{email}}.",
+    "formspreeNote": "This form posts to Formspree. Add your form ID in the profile content to receive messages."
+  },
+  "blogPage": {
+    "eyebrow": "Writing",
+    "title": "Notes & articles",
+    "subtitle": "Thoughts on engineering, performance, and building products that last.",
+    "enjoyed": "Enjoyed this?",
+    "shareIt": "Share it or get in touch."
+  },
+  "notFound": {
+    "code": "404",
+    "title": "This page wandered off.",
+    "text": "The page you're looking for doesn't exist or has moved. Let's get you back on track."
+  },
+  "footer": {
+    "ctaTitle": "Have A Project In Mind?",
+    "ctaText": "Let's build something great together. I'm available for freelance and full-time work.",
+    "navigation": "Navigation",
+    "getInTouch": "Get in touch",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with React, Vite & Tailwind CSS."
+  },
+  "language": "Language"
+}

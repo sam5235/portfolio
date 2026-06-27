@@ -1,0 +1,21 @@
+[
+  { "name": "React", "slug": "react" },
+  { "name": "Next.js", "slug": "nextdotjs" },
+  { "name": "Vue.js", "slug": "vuedotjs" },
+  { "name": "Nuxt", "slug": "nuxt" },
+  { "name": "TypeScript", "slug": "typescript" },
+  { "name": "JavaScript", "slug": "javascript" },
+  { "name": "Redux", "slug": "redux" },
+  { "name": "Tailwind CSS", "slug": "tailwindcss" },
+  { "name": "Claude", "slug": "claude" },
+  { "name": "Gemini", "slug": "googlegemini" },
+  { "name": "LangChain", "slug": "langchain" },
+  { "name": "Bootstrap", "slug": "bootstrap" },
+  { "name": "Firebase", "slug": "firebase" },
+  { "name": ".NET", "slug": "dotnet" },
+  { "name": "Chart.js", "slug": "chartdotjs" },
+  { "name": "Figma", "slug": "figma" },
+  { "name": "Git", "slug": "git" },
+  { "name": "GitHub", "slug": "github" },
+  { "name": "Vite", "slug": "vite" }
+]

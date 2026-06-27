@@ -1,0 +1,99 @@
+[
+  {
+    "slug": "uneca-statistical-data-manager",
+    "title": "UNECA — Statistical Data Manager",
+    "summary": "A composable data-visualization platform for statisticians to build and publish custom dashboards.",
+    "description": "Built a data-visualization platform that lets statisticians build and publish custom dashboards. The composable interface lets users dynamically create charts, maps, and tables from millions of aggregated data points to communicate specific insights.",
+    "tags": ["Vue.js", ".NET Core", "Tailwind CSS"],
+    "category": "Client",
+    "year": 2025,
+    "featured": true,
+    "kind": "dashboard",
+    "cover": "linear-gradient(135deg, #1b2a47 0%, #34507f 100%)",
+    "thumbnail": "UNECA -thumgnail.png",
+    "media": [
+      { "type": "image", "src": "UNECA -thumgnail.png", "alt": "UNECA Statistical Data Manager" },
+      { "type": "video", "src": "UNECA Statistical Data Manager - Demo.mp4", "thumbnail": "UNECA -thumgnail.png", "alt": "UNECA — demo" }
+    ]
+  },
+  {
+    "slug": "afrochat-ai-assistant",
+    "title": "AfroChat — AI Assistant",
+    "summary": "An AI-powered productivity assistant for proofreading, summarizing, and organizing tasks.",
+    "description": "AfroChat is an AI-powered assistant designed to boost productivity by simplifying everyday tasks: enhancing communication with proofreading and clarity tools, streamlining information with quick summarization, and organizing schedules. Built with a user-centric design and intelligent automation.",
+    "tags": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"],
+    "category": "Client",
+    "year": 2024,
+    "featured": true,
+    "kind": "ai",
+    "cover": "linear-gradient(135deg, #f97316 0%, #1b2a47 100%)",
+    "thumbnail": "AfroChat - thumbnail.png",
+    "media": [
+      { "type": "image", "src": "AfroChat - thumbnail.png", "alt": "AfroChat AI Assistant" },
+      { "type": "video", "src": "AfroChat - AI Assistant - Demo.mp4", "thumbnail": "AfroChat - thumbnail.png", "alt": "AfroChat — demo" }
+    ]
+  },
+  {
+    "slug": "meditopia",
+    "title": "Meditopia — Medical Records",
+    "summary": "A centralized medical-record system for Ethiopia with appointments and prescriptions.",
+    "description": "A centralized medical-record system for Ethiopia, letting patients and healthcare providers access records and information from anywhere in the country. Patients manage their medical info while providers access accurate, up-to-date data to provide better care — plus appointment scheduling and prescription management.",
+    "tags": ["React", "Next.js", "JavaScript", "Firebase", "Cloud Firestore"],
+    "category": "Personal",
+    "year": 2023,
+    "featured": true,
+    "kind": "web",
+    "liveUrl": "https://med-ethiopia.vercel.app/",
+    "cover": "linear-gradient(135deg, #070d18 0%, #34507f 100%)",
+    "thumbnail": "Medethiopia - thumbnail.png",
+    "media": [
+      { "type": "image", "src": "Medethiopia - thumbnail.png", "alt": "Meditopia" },
+      { "type": "video", "src": "Medethiopia demo.mp4", "thumbnail": "Medethiopia - thumbnail.png", "alt": "Meditopia — demo" }
+    ]
+  },
+  {
+    "slug": "atrons-learning-together",
+    "title": "Atrons — Learning Together",
+    "summary": "A platform for students to share, search, and choose tried-and-tested study materials.",
+    "description": "Atrons is a platform where students can share, search, and choose from tried-and-tested materials, books, videos, and quizzes for their studies. Worked as Frontend Engineer delivering the landing experience and core flows.",
+    "tags": ["Vue.js", "Bootstrap", "REST API", "Vuex", "Figma"],
+    "category": "Client",
+    "year": 2022,
+    "featured": false,
+    "kind": "web",
+    "cover": "linear-gradient(135deg, #1b2a47 0%, #afbfd6 100%)",
+    "thumbnail": "Atrons - thumbnail.png",
+    "media": [
+      { "type": "image", "src": "Atrons - thumbnail.png", "alt": "Atrons — Learning Together" }
+    ]
+  },
+  {
+    "slug": "afrochat-admin-dashboard",
+    "title": "AfroChat — Admin Dashboard",
+    "summary": "Analytics dashboard tracking key metrics for the AfroChat web and mobile apps.",
+    "description": "Designed and developed to provide comprehensive tracking of key metrics across the AfroChat website and mobile app. Robust analytics tools surface actionable insights from user statistics, empowering informed decision-making and optimized performance.",
+    "tags": ["React", "Next.js", "Chart.js", "Redux"],
+    "category": "Client",
+    "year": 2024,
+    "featured": false,
+    "kind": "dashboard",
+    "cover": "linear-gradient(135deg, #0b1220 0%, #1b2a47 100%)",
+    "thumbnail": "AfroChat Admin - thumbnail.png",
+    "media": [
+      { "type": "image", "src": "AfroChat Admin - thumbnail.png", "alt": "AfroChat Admin Dashboard" },
+      { "type": "video", "src": "AfroChat Admin dashboard Demo.mp4", "thumbnail": "AfroChat Admin - thumbnail.png", "alt": "AfroChat Admin — demo" }
+    ]
+  },
+  {
+    "slug": "afrochat-telegram-bot",
+    "title": "AfroChat — Telegram Chatbot",
+    "summary": "The AfroChat AI assistant integrated into Telegram as a fully functional bot.",
+    "description": "Developed a fully functional AI assistant chatbot as a web app integrated with Telegram, enabling seamless user interactions for tasks like summarizing, organizing, and proofreading.",
+    "tags": ["React", "Redux", "Telegram"],
+    "category": "Client",
+    "year": 2024,
+    "featured": false,
+    "kind": "ai",
+    "cover": "linear-gradient(135deg, #f97316 0%, #ea670c 100%)"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Front-End Development",
+    "description": "Dynamic, responsive interfaces built to scale",
+    "icon": "code",
+    "highlights": ["React & Next.js", "Vue & Nuxt", "TypeScript"]
+  },
+  {
+    "title": "Custom Web Applications",
+    "description": "Reusable, component-based architectures from the ground",
+    "icon": "layers",
+    "highlights": ["Reusable components", "Scalable architecture", "Design systems"]
+  },
+  {
+    "title": "State Management",
+    "description": "Predictable, maintainable client-side state",
+    "icon": "layout",
+    "highlights": ["Redux Toolkit", "Vuex / Pinia", "Clean data flow"]
+  },
+  {
+    "title": "Performance & UI/UX",
+    "description": "Fast, accessible apps that feel effortless",
+    "icon": "zap",
+    "highlights": ["Core Web Vitals", "Accessibility (a11y)", "Pixel-perfect UI"]
+  },
+  {
+    "title": "Backend & APIs",
+    "description": "Robust services that power your product",
+    "icon": "server",
+    "highlights": ["REST & GraphQL", "Node.js & .NET Core", "Auth & security"]
+  },
+  {
+    "title": "Databases",
+    "description": "Reliable data modeling and storage",
+    "icon": "database",
+    "highlights": ["PostgreSQL", "Firebase / Firestore", "Schema design"]
+  },
+  {
+    "title": "Cloud & DevOps",
+    "description": "Ship safely and keep things running",
+    "icon": "cloud",
+    "highlights": ["Vercel & cloud deploy", "CI/CD pipelines", "Monitoring"]
+  },
+  {
+    "title": "AI Integration & Agents",
+    "description": "LLM-powered features and agentic workflows",
+    "icon": "sparkles",
+    "highlights": ["Claude & Gemini", "Claude Code", "LLM workflows"]
+  }
+]

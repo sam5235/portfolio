@@ -1,0 +1,54 @@
+{
+  "experiences": [
+    {
+      "role": "Full-Stack Developer",
+      "company": "UNECA (UN Economic Commission for Africa)",
+      "type": "Contract",
+      "period": "Jan 2025 — Dec 2025",
+      "location": "Remote",
+      "description": "Built a composable data-visualization platform for statisticians to create and publish custom dashboards.",
+      "highlights": [
+        "Developed a composable interface for dynamically building charts, maps, and tables.",
+        "Aggregated millions of data points into clear, publishable insights.",
+        "Delivered a polished, responsive UI with Tailwind CSS."
+      ],
+      "tech": ["Vue.js", ".NET Core", "Tailwind CSS"]
+    },
+    {
+      "role": "Software Engineer (Frontend)",
+      "company": "A2SV — Africa to Silicon Valley",
+      "type": "Full-time",
+      "period": "Feb 2023 — Oct 2024",
+      "location": "Hybrid · Addis Ababa",
+      "description": "Frontend developer across the AfroChat product suite — website, AI assistant, Telegram bot, and analytics dashboard.",
+      "highlights": [
+        "Designed and built the AfroChat AI assistant website — responsive and user-friendly.",
+        "Built an admin dashboard for usage metrics and system performance.",
+        "Shipped an AI assistant chatbot integrated with Telegram for summarizing, organizing, and proofreading."
+      ],
+      "tech": ["React", "Next.js", "TypeScript", "Tailwind CSS", "Redux"]
+    },
+    {
+      "role": "Top-Rated Freelancer",
+      "company": "Upwork",
+      "type": "Freelance",
+      "period": "2023 — Present",
+      "location": "Remote",
+      "description": "Delivering React/Next.js fixes and features for international clients with a perfect rating.",
+      "highlights": [
+        "5.0 average rating across completed contracts.",
+        "Fixed crashes, EDI parsers, and responsiveness bugs in React/Next.js apps.",
+        "Connected React apps to e-commerce APIs and databases."
+      ],
+      "tech": ["React", "Next.js", "JavaScript"]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.Sc. Electrical & Computer Engineering",
+      "school": "Addis Ababa University",
+      "period": ""
+    }
+  ],
+  "certifications": []
+}
