@@ -8,7 +8,7 @@ export function NotFound() {
   const { t } = useTranslation()
   return (
     <>
-      <Seo title={t('notFound.title')} />
+      <Seo title={t('notFound.title')} noindex />
       <section className="relative flex min-h-[60vh] items-center overflow-hidden">
         <GridPattern className="opacity-50" />
         <Container className="relative text-center">

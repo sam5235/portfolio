@@ -18,6 +18,12 @@ export type Profile = {
   stats: Stat[]
   whyMe: string[]
   socials: Social[]
+  seo: {
+    siteUrl: string
+    ogImage: string
+    twitter: string
+    keywords: string[]
+  }
 }
 
 export type Service = {

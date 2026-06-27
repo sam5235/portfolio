@@ -10,6 +10,26 @@
   "cvUrl": "/cv.pdf",
   "calendlyUrl": "https://calendly.com/your-handle/30min",
   "formspreeEndpoint": "https://formspree.io/f/your-form-id",
+  "seo": {
+    "siteUrl": "https://samiyahamid.com",
+    "ogImage": "/og.png",
+    "twitter": "@your-handle",
+    "keywords": [
+      "Samiya Hamid",
+      "Software Engineer",
+      "Frontend Developer",
+      "Full-Stack Developer",
+      "React Developer",
+      "Next.js",
+      "Vue.js",
+      "Nuxt",
+      "TypeScript",
+      "AI Integration",
+      "Web Developer",
+      "Addis Ababa",
+      "Ethiopia"
+    ]
+  },
   "stats": [
     { "label": "Years experience", "value": "2.5+" },
     { "label": "Projects delivered", "value": "10+" },

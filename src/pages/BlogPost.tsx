@@ -29,6 +29,10 @@ export function BlogPost() {
         title={post.title}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
+        type="article"
+        publishedTime={post.date}
+        articleTags={post.tags}
+        keywords={post.tags}
       />
 
       {/* Hero cover */}

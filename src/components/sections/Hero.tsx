@@ -24,7 +24,7 @@ export function Hero() {
         className="pointer-events-none absolute -right-24 bottom-0 size-80 rounded-full bg-lime-accent/10 blur-3xl"
       />
 
-      <div className="relative z-10 mx-auto grid w-full max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-8 lg:py-24">
+      <div className="relative z-30 mx-auto grid w-full max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 lg:grid-cols-2 lg:gap-8 lg:py-24">
         {/* Illustration panel */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
