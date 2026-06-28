@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://samiyahamid.com/sitemap.xml
+Sitemap: https://portfolio-bay-seven-1drrqcmciw.vercel.app/sitemap.xml
