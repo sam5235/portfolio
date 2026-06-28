@@ -132,13 +132,11 @@ body {
 .glass {
   background: rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(16px) saturate(150%);
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
   border: 1px solid rgba(255, 255, 255, 0.6);
 }
 .glass-strong {
   background: rgba(255, 255, 255, 0.78);
   backdrop-filter: blur(20px) saturate(160%);
-  -webkit-backdrop-filter: blur(20px) saturate(160%);
   border: 1px solid rgba(255, 255, 255, 0.7);
 }
 .dark .glass {
