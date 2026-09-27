@@ -6,17 +6,19 @@ import { ButtonAnchor, ButtonLink } from '../ui/Button'
 import { GridPattern } from '../ui/GridPattern'
 import { Logo } from '../ui/Logo'
 import { BackToTop } from '../ui/BackToTop'
+import { HIDE_CONTACT } from '../../config/site'
 
 const nav = [
   { to: '/projects', key: 'nav.projects' },
   { to: '/experience', key: 'nav.experience' },
   { to: '/blog', key: 'nav.blog' },
-  { to: '/contact', key: 'nav.contact' },
+  ...(HIDE_CONTACT ? [] : [{ to: '/contact', key: 'nav.contact' }]),
 ]
 
 export function Footer() {
   const { t } = useTranslation()
   const { profile } = useContent()
+  const upwork = profile.socials.find((s) => s.icon === 'upwork')
   return (
     <footer className="mt-auto bg-violet-500 pb-28 text-white md:pb-0">
       <BackToTop />
@@ -33,6 +35,20 @@ export function Footer() {
                 {t('footer.ctaText')}
               </p>
             </div>
+            {HIDE_CONTACT ? (
+              upwork && (
+                <ButtonAnchor
+                  href={upwork.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="accent"
+                  size="lg"
+                  icon="arrow-right"
+                >
+                  {t('actions.hireOnUpwork')}
+                </ButtonAnchor>
+              )
+            ) : (
             <div className="flex flex-wrap gap-3">
               <ButtonLink to="/contact" variant="accent" size="lg" icon="arrow-right">
                 {t('actions.startProject')}
@@ -50,6 +66,7 @@ export function Footer() {
                 {t('actions.bookACall')}
               </ButtonAnchor>
             </div>
+            )}
           </div>
 
           {/* Lower row */}
@@ -87,6 +104,7 @@ export function Footer() {
                 {t('footer.getInTouch')}
               </h3>
               <ul className="mt-4 space-y-2.5 text-sm text-violet-100">
+                {profile.email && (
                 <li>
                   <a
                     href={`mailto:${profile.email}`}
@@ -95,6 +113,7 @@ export function Footer() {
                     {profile.email}
                   </a>
                 </li>
+                )}
                 <li>{profile.location}</li>
               </ul>
             </div>

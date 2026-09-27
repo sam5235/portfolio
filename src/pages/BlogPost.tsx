@@ -5,6 +5,7 @@ import { Container } from '../components/ui/Section'
 import { ButtonLink } from '../components/ui/Button'
 import { Icon } from '../components/ui/Icon'
 import { SocialLinks } from '../components/ui/SocialLinks'
+import { HIDE_CONTACT } from '../config/site'
 import { useContent } from '../content'
 import { NotFound } from './NotFound'
 
@@ -86,11 +87,13 @@ export function BlogPost() {
             <SocialLinks />
           </div>
 
-          <div className="mt-10 text-center">
-            <ButtonLink to="/contact" variant="primary" size="lg" icon="arrow-right">
-              {t('actions.workWithMe')}
-            </ButtonLink>
-          </div>
+          {!HIDE_CONTACT && (
+            <div className="mt-10 text-center">
+              <ButtonLink to="/contact" variant="primary" size="lg" icon="arrow-right">
+                {t('actions.workWithMe')}
+              </ButtonLink>
+            </div>
+          )}
         </article>
       </Container>
     </>

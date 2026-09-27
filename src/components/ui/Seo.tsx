@@ -1,4 +1,5 @@
 import { useContent } from '../../content'
+import { HIDE_CONTACT } from '../../config/site'
 
 type SeoProps = {
   title: string
@@ -54,7 +55,7 @@ export function Seo({
     description: profile.intro,
     url: base,
     image: absImage,
-    email: `mailto:${profile.email}`,
+    ...(profile.email && { email: `mailto:${profile.email}` }),
     address: profile.location,
     sameAs,
     knowsAbout: profile.seo.keywords,
@@ -68,7 +69,8 @@ export function Seo({
       <meta name="author" content={profile.name} />
       <meta
         name="robots"
-        content={noindex ? 'noindex, nofollow' : 'index, follow'}
+        // The contact-free build is a duplicate of the main site; keep it out of search.
+        content={noindex || HIDE_CONTACT ? 'noindex, nofollow' : 'index, follow'}
       />
       <link rel="canonical" href={url} />
 
@@ -93,8 +95,8 @@ export function Seo({
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content={twitter} />
-      <meta name="twitter:creator" content={twitter} />
+      {twitter && <meta name="twitter:site" content={twitter} />}
+      {twitter && <meta name="twitter:creator" content={twitter} />}
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={desc} />
       <meta name="twitter:image" content={absImage} />

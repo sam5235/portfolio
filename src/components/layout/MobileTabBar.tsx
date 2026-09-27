@@ -1,13 +1,16 @@
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Icon, type IconName } from "../ui/Icon";
+import { HIDE_CONTACT } from "../../config/site";
 
 const tabs: { to: string; key: string; icon: IconName }[] = [
   { to: "/", key: "nav.home", icon: "home" },
   { to: "/projects", key: "nav.projects", icon: "layers" },
   { to: "/experience", key: "nav.experience", icon: "briefcase" },
   { to: "/blog", key: "nav.blog", icon: "book" },
-  { to: "/contact", key: "nav.contact", icon: "mail" },
+  ...(HIDE_CONTACT
+    ? []
+    : [{ to: "/contact", key: "nav.contact", icon: "mail" as IconName }]),
 ];
 
 // Floating app-style bottom navigation (mobile only) with an iOS "liquid glass"

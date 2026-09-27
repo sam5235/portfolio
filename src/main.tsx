@@ -13,6 +13,7 @@ import { Contact } from './pages/Contact'
 import { Blog } from './pages/Blog'
 import { BlogPost } from './pages/BlogPost'
 import { NotFound } from './pages/NotFound'
+import { HIDE_CONTACT } from './config/site'
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       { path: 'experience', element: <Experience /> },
       { path: 'blog', element: <Blog /> },
       { path: 'blog/:slug', element: <BlogPost /> },
-      { path: 'contact', element: <Contact /> },
+      ...(HIDE_CONTACT ? [] : [{ path: 'contact', element: <Contact /> }]),
       { path: '*', element: <NotFound /> },
     ],
   },

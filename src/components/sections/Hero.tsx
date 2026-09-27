@@ -7,6 +7,7 @@ import { GridPattern } from '../ui/GridPattern'
 import { ParticlesBackground } from '../ui/ParticlesBackground'
 import { Tilt } from '../ui/Tilt'
 import { WorkspaceIllustration } from '../illustrations/WorkspaceIllustration'
+import { HIDE_CONTACT } from '../../config/site'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -70,6 +71,7 @@ export function Hero() {
             <ButtonLink to="/projects" variant="primary" size="lg" icon="arrow-right">
               {t('actions.viewMyWork')}
             </ButtonLink>
+            {!HIDE_CONTACT && (
             <ButtonAnchor
               href={profile.cvUrl}
               download
@@ -80,6 +82,7 @@ export function Hero() {
             >
               {t('hero.downloadCv')}
             </ButtonAnchor>
+            )}
           </motion.div>
 
           <dl className="mt-12 grid max-w-lg grid-cols-2 gap-6 sm:grid-cols-4">

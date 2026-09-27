@@ -47,7 +47,5 @@
   "socials": [
     { "name": "GitHub", "url": "https://github.com/sam5235", "icon": "github" },
     { "name": "LinkedIn", "url": "https://www.linkedin.com/in/samiya-hamid-149115224/", "icon": "linkedin" },
-    { "name": "Upwork", "url": "https://www.upwork.com/freelancers/~0123dda34004da49e6", "icon": "upwork" },
-    { "name": "Email", "url": "mailto:samiya@example.com", "icon": "mail" }
-  ]
+    { "name": "Upwork", "url": "https://www.upwork.com/freelancers/~0123dda34004da49e6", "icon": "upwork" }  ]
 }

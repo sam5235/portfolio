@@ -6,13 +6,14 @@ import { ButtonAnchor } from '../ui/Button'
 import { ThemeToggle } from '../ui/ThemeToggle'
 import { LanguageSwitcher } from '../ui/LanguageSwitcher'
 import { Logo } from '../ui/Logo'
+import { HIDE_CONTACT } from '../../config/site'
 
 const links = [
   { to: '/', key: 'nav.home' },
   { to: '/projects', key: 'nav.projects' },
   { to: '/experience', key: 'nav.experience' },
   { to: '/blog', key: 'nav.blog' },
-  { to: '/contact', key: 'nav.contact' },
+  ...(HIDE_CONTACT ? [] : [{ to: '/contact', key: 'nav.contact' }]),
 ]
 
 export function Navbar() {
@@ -56,6 +57,7 @@ export function Navbar() {
         <div className="flex items-center gap-3">
           <LanguageSwitcher />
           <ThemeToggle />
+          {!HIDE_CONTACT && (
           <ButtonAnchor
             href={profile.cvUrl}
             download
@@ -67,6 +69,7 @@ export function Navbar() {
           >
             {t('nav.downloadCv')}
           </ButtonAnchor>
+          )}
         </div>
       </nav>
     </header>

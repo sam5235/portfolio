@@ -43,4 +43,5 @@ A developer-portfolio single-page app (React 19 + TypeScript + Vite 8, styled wi
 
 - Drop a real `public/cv.pdf` (the Download CV button links to `site.cvUrl`).
 - Set a real Formspree form id and Calendly URL in [src/content/en/profile.json](src/content/en/profile.json) for the contact form / "Book a call".
+- **Contact-free deployment** (for Upwork, which bans sharing contact info pre-contract): deploy the same repo a second time with env `VITE_HIDE_CONTACT=true`. A Vite plugin in [vite.config.ts](vite.config.ts) blanks `email`/`cvUrl`/`calendlyUrl`/`formspreeEndpoint`/twitter and drops non-Upwork socials from every `profile.json` at build time, removes `cv.pdf`/`sitemap.xml`, and writes a `Disallow: /` robots.txt. Components gate contact UI (Contact route/nav, CV buttons, footer CTA/email, blog "Work with me") on `HIDE_CONTACT` from [src/config/site.ts](src/config/site.ts); any new contact-bearing UI must do the same. That build is `noindex` and its canonical points at the main site.
 - SPA fallback for deep links is pre-configured for Netlify ([public/_redirects](public/_redirects)) and Vercel ([vercel.json](vercel.json)).

@@ -7,6 +7,7 @@ import { ButtonAnchor } from '../components/ui/Button'
 import { Icon } from '../components/ui/Icon'
 import { Timeline } from '../components/sections/Timeline'
 import { useContent } from '../content'
+import { HIDE_CONTACT } from '../config/site'
 
 export function Experience() {
   const { t } = useTranslation()
@@ -24,6 +25,7 @@ export function Experience() {
         title={t('experiencePage.title')}
         subtitle={t('experiencePage.subtitle')}
       >
+        {!HIDE_CONTACT && (
         <ButtonAnchor
           href={profile.cvUrl}
           download
@@ -34,6 +36,7 @@ export function Experience() {
         >
           {t('experiencePage.downloadFullCv')}
         </ButtonAnchor>
+        )}
       </PageHeader>
 
       <Section>
