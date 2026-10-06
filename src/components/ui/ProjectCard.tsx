@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'motion/react'
 import type { Project } from '../../content'
 import { Icon } from './Icon'
@@ -8,9 +9,29 @@ import { ProjectIllustration } from '../illustrations/ProjectIllustration'
 
 export function ProjectCard({ project }: { project: Project }) {
   const { t } = useTranslation()
-  const [lightbox, setLightbox] = useState(false)
+  const [params, setParams] = useSearchParams()
   const media = project.media ?? []
   const hasMedia = media.length > 0
+  // Shared links (/projects?project=<slug>&media=<n>) open straight into the
+  // lightbox on that item.
+  const linked = hasMedia && params.get('project') === project.slug
+  const linkedIndex = Number(params.get('media')) - 1
+  const [openAt, setOpenAt] = useState<number | null>(
+    linked ? (media[linkedIndex] ? linkedIndex : 0) : null,
+  )
+
+  const close = () => {
+    setOpenAt(null)
+    if (!linked) return
+    setParams(
+      (prev) => {
+        prev.delete('project')
+        prev.delete('media')
+        return prev
+      },
+      { replace: true, preventScrollReset: true },
+    )
+  }
   const hasVideo = media.some((m) => m.type === 'video')
 
   return (
@@ -47,7 +68,7 @@ export function ProjectCard({ project }: { project: Project }) {
         {hasMedia ? (
           <button
             type="button"
-            onClick={() => setLightbox(true)}
+            onClick={() => setOpenAt(0)}
             aria-label={`${t('actions.preview')} — ${project.title}`}
             className="group/preview absolute inset-0 z-10 flex items-center justify-center bg-ink/0 transition-colors duration-300 hover:bg-ink/30"
           >
@@ -87,7 +108,7 @@ export function ProjectCard({ project }: { project: Project }) {
           {hasMedia && (
             <button
               type="button"
-              onClick={() => setLightbox(true)}
+              onClick={() => setOpenAt(0)}
               className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-700 dark:text-violet-300"
             >
               <Icon name={hasVideo ? 'play' : 'maximize'} size={16} />{' '}
@@ -118,11 +139,15 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <AnimatePresence>
-        {lightbox && (
+        {openAt !== null && (
           <Lightbox
             media={media}
+            startIndex={openAt}
             title={project.title}
-            onClose={() => setLightbox(false)}
+            getShareUrl={(i) =>
+              `${window.location.origin}/projects?project=${encodeURIComponent(project.slug)}&media=${i + 1}`
+            }
+            onClose={close}
           />
         )}
       </AnimatePresence>

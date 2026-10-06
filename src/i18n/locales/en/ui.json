@@ -22,7 +22,9 @@
     "liveDemo": "Live Demo",
     "code": "Code",
     "backToTop": "Back to top",
-    "preview": "Preview"
+    "preview": "Preview",
+    "share": "Share",
+    "linkCopied": "Link copied"
   },
   "hero": {
     "greeting": "Hi, I'm {{name}}.",

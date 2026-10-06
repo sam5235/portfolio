@@ -31,6 +31,7 @@ export type IconName =
   | 'layers'
   | 'play'
   | 'maximize'
+  | 'share'
   | 'home'
   | 'briefcase'
   | 'book'
@@ -103,6 +104,12 @@ const paths: Record<IconName, ReactNode> = {
     <>
       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
       <circle cx="12" cy="10" r="3" />
+    </>
+  ),
+  share: (
+    <>
+      <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+      <path d="m16 6-4-4-4 4M12 2v13" />
     </>
   ),
   check: <path d="M20 6 9 17l-5-5" />,

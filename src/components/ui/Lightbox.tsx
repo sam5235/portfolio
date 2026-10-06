@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { AnimatePresence, motion } from 'motion/react'
+import { useTranslation } from 'react-i18next'
 import { Icon } from './Icon'
 import type { MediaItem } from '../../content'
 
@@ -8,6 +9,8 @@ type LightboxProps = {
   media: MediaItem[]
   startIndex?: number
   title?: string
+  /** Builds a deep link to the item at `index`; enables the Share button. */
+  getShareUrl?: (index: number) => string
   onClose: () => void
 }
 
@@ -17,9 +20,12 @@ export function Lightbox({
   media,
   startIndex = 0,
   title,
+  getShareUrl,
   onClose,
 }: LightboxProps) {
+  const { t } = useTranslation()
   const [index, setIndex] = useState(startIndex)
+  const [copied, setCopied] = useState(false)
   const count = media.length
 
   const go = useCallback(
@@ -44,7 +50,33 @@ export function Lightbox({
     }
   }, [onClose, go])
 
+  useEffect(() => {
+    if (!copied) return
+    const id = setTimeout(() => setCopied(false), 2000)
+    return () => clearTimeout(id)
+  }, [copied])
+
   const item = media[index]
+
+  // Native share sheet where available (mobile), otherwise copy the link.
+  const share = async () => {
+    if (!getShareUrl) return
+    const url = getShareUrl(index)
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: item.alt ?? title, url })
+        return
+      } catch (err) {
+        if ((err as DOMException).name === 'AbortError') return
+      }
+    }
+    try {
+      await navigator.clipboard.writeText(url)
+      setCopied(true)
+    } catch {
+      window.prompt(t('actions.share'), url)
+    }
+  }
 
   return createPortal(
     <motion.div
@@ -67,6 +99,24 @@ export function Lightbox({
       >
         <Icon name="close" size={22} />
       </button>
+
+      {/* Share */}
+      {getShareUrl && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation()
+            share()
+          }}
+          aria-label={t('actions.share')}
+          className="absolute right-[4.25rem] top-4 z-10 flex h-11 items-center justify-center gap-2 rounded-full bg-white/10 px-4 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/20"
+        >
+          <Icon name={copied ? 'check' : 'share'} size={18} />
+          <span aria-live="polite">
+            {copied ? t('actions.linkCopied') : t('actions.share')}
+          </span>
+        </button>
+      )}
 
       {/* Prev / Next */}
       {count > 1 && (
