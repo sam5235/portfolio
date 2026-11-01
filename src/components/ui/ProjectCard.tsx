@@ -5,6 +5,7 @@ import { AnimatePresence } from 'motion/react'
 import type { Project } from '../../content'
 import { Icon } from './Icon'
 import { Lightbox } from './Lightbox'
+import { ProjectDetails } from './ProjectDetails'
 import { ProjectIllustration } from '../illustrations/ProjectIllustration'
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -33,6 +34,8 @@ export function ProjectCard({ project }: { project: Project }) {
     )
   }
   const hasVideo = media.some((m) => m.type === 'video')
+  const hasDetails = (project.contributions?.length ?? 0) > 0
+  const [detailsOpen, setDetailsOpen] = useState(false)
 
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-ink/10 bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-violet-500/10 dark:border-white/10 dark:bg-white/[0.03]">
@@ -79,6 +82,19 @@ export function ProjectCard({ project }: { project: Project }) {
               {media.length} {hasVideo ? '▶' : '◳'}
             </span>
           </button>
+        ) : hasDetails ? (
+          <button
+            type="button"
+            onClick={() => setDetailsOpen(true)}
+            aria-label={`${t('actions.details')} — ${project.title}`}
+            className="absolute inset-0 z-10 bg-ink/0 transition-colors duration-300 hover:bg-ink/30"
+          >
+            <Icon
+              name="arrow-up-right"
+              size={28}
+              className="absolute bottom-4 right-4 text-white opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </button>
         ) : (
           <Icon
             name="arrow-up-right"
@@ -104,37 +120,21 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
-        {project.contributions && project.contributions.length > 0 && (
-          <div className="mt-4">
-            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
-              {t('projectsPage.mergedPrs')}
-            </p>
-            <ul className="mt-2 space-y-1.5">
-              {project.contributions.map((pr) => (
-                <li key={pr.url}>
-                  <a
-                    href={pr.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-start gap-1.5 text-sm text-violet-600 hover:text-violet-700 dark:text-violet-300"
-                  >
-                    <Icon name="github" size={14} className="mt-0.5 shrink-0" />
-                    <span>
-                      <span className="font-semibold">#{pr.url.split('/').pop()}</span>{' '}
-                      {pr.title}
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
         <div className="mt-5 flex gap-4 border-t border-ink/5 pt-4 text-sm font-semibold dark:border-white/5">
+          {hasDetails && (
+            <button
+              type="button"
+              onClick={() => setDetailsOpen(true)}
+              className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-700 dark:text-violet-300 dark:hover:text-violet-100"
+            >
+              <Icon name="layers" size={16} /> {t('actions.details')}
+            </button>
+          )}
           {hasMedia && (
             <button
               type="button"
               onClick={() => setOpenAt(0)}
-              className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-700 dark:text-violet-300"
+              className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-700 dark:text-violet-300 dark:hover:text-violet-100"
             >
               <Icon name={hasVideo ? 'play' : 'maximize'} size={16} />{' '}
               {t('actions.preview')}
@@ -145,7 +145,7 @@ export function ProjectCard({ project }: { project: Project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-700 dark:text-violet-300"
+              className="inline-flex items-center gap-1.5 text-violet-600 hover:text-violet-700 dark:text-violet-300 dark:hover:text-violet-100"
             >
               <Icon name="external" size={16} /> {t('actions.liveDemo')}
             </a>
@@ -174,6 +174,9 @@ export function ProjectCard({ project }: { project: Project }) {
             }
             onClose={close}
           />
+        )}
+        {detailsOpen && (
+          <ProjectDetails project={project} onClose={() => setDetailsOpen(false)} />
         )}
       </AnimatePresence>
     </article>

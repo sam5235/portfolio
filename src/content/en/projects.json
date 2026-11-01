@@ -9,6 +9,7 @@
     "year": 2026,
     "featured": true,
     "kind": "dashboard",
+    "thumbnail": "Expensify - thumbnail.svg",
     "repoUrl": "https://github.com/Expensify/App",
     "cover": "linear-gradient(135deg, #03d47c 0%, #002e22 100%)",
     "contributions": [

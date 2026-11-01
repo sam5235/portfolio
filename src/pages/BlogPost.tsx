@@ -45,7 +45,7 @@ export function BlogPost() {
         <article className="mx-auto max-w-2xl">
           <Link
             to="/blog"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-600 hover:text-violet-700 dark:text-violet-300"
+            className="inline-flex items-center gap-1.5 text-sm font-medium text-violet-600 hover:text-violet-700 dark:text-violet-300 dark:hover:text-violet-100"
           >
             <Icon name="arrow-right" size={16} className="rotate-180" />{' '}
             {t('actions.backToBlog')}

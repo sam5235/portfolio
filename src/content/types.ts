@@ -70,7 +70,7 @@ export type Project = {
 export type Experience = {
   role: string
   company: string
-  type: 'Full-time' | 'Contract' | 'Freelance'
+  type: 'Full-time' | 'Contract' | 'Freelance' | 'Open Source'
   period: string
   location: string
   description: string

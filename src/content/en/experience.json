@@ -1,6 +1,20 @@
 {
   "experiences": [
     {
+      "role": "Open Source Contributor",
+      "company": "Expensify",
+      "type": "Open Source",
+      "period": "Oct 2026 — Present",
+      "location": "Remote",
+      "description": "Contributing features and fixes to Expensify/App, the open-source React Native app behind New Expensify (web, iOS, Android, desktop).",
+      "highlights": [
+        "Added a Paid column option to the Spend reports table (#103956).",
+        "Widened the date columns of expanded Search groups so past-year dates display correctly (#105307).",
+        "Worked through Expensify's public contributor program: proposals, code review, and QA on a large production codebase."
+      ],
+      "tech": ["React Native", "TypeScript", "React", "Onyx"]
+    },
+    {
       "role": "Full-Stack Developer",
       "company": "UNECA (UN Economic Commission for Africa)",
       "type": "Contract",

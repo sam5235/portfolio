@@ -64,7 +64,7 @@ export function Contact() {
                     </span>
                     <a
                       href={`mailto:${profile.email}`}
-                      className="text-slate-700 hover:text-violet-600 dark:text-slate-300"
+                      className="text-slate-700 hover:text-violet-600 dark:text-slate-300 dark:hover:text-white"
                     >
                       {profile.email}
                     </a>
