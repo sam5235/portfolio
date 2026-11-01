@@ -63,6 +63,8 @@ export type Project = {
   repoUrl?: string
   cover: string
   media?: MediaItem[]
+  /** Merged pull requests, listed on the card (used for Open Source work). */
+  contributions?: { title: string; url: string }[]
 }
 
 export type Experience = {

@@ -1,5 +1,22 @@
 [
   {
+    "slug": "expensify-app",
+    "title": "Expensify — Open Source Contributor",
+    "summary": "Contributing features and fixes to New Expensify, the open-source expense and reporting app.",
+    "description": "Contributor to Expensify/App, the open-source cross-platform (web, iOS, Android, desktop) app behind New Expensify. Picked up issues through Expensify's public contributor program and shipped merged pull requests to the Search and Reports experiences.",
+    "tags": ["React Native", "TypeScript", "React", "Onyx"],
+    "category": "Open Source",
+    "year": 2026,
+    "featured": true,
+    "kind": "dashboard",
+    "repoUrl": "https://github.com/Expensify/App",
+    "cover": "linear-gradient(135deg, #03d47c 0%, #002e22 100%)",
+    "contributions": [
+      { "title": "Add a Paid column option to the Spend reports table", "url": "https://github.com/Expensify/App/pull/103956" },
+      { "title": "Widen the date columns of expanded Search groups for past-year dates", "url": "https://github.com/Expensify/App/pull/105307" }
+    ]
+  },
+  {
     "slug": "uneca-statistical-data-manager",
     "title": "UNECA — Statistical Data Manager",
     "summary": "A composable data-visualization platform for statisticians to build and publish custom dashboards.",

@@ -104,6 +104,31 @@ export function ProjectCard({ project }: { project: Project }) {
             </li>
           ))}
         </ul>
+        {project.contributions && project.contributions.length > 0 && (
+          <div className="mt-4">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400">
+              {t('projectsPage.mergedPrs')}
+            </p>
+            <ul className="mt-2 space-y-1.5">
+              {project.contributions.map((pr) => (
+                <li key={pr.url}>
+                  <a
+                    href={pr.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-start gap-1.5 text-sm text-violet-600 hover:text-violet-700 dark:text-violet-300"
+                  >
+                    <Icon name="github" size={14} className="mt-0.5 shrink-0" />
+                    <span>
+                      <span className="font-semibold">#{pr.url.split('/').pop()}</span>{' '}
+                      {pr.title}
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         <div className="mt-5 flex gap-4 border-t border-ink/5 pt-4 text-sm font-semibold dark:border-white/5">
           {hasMedia && (
             <button

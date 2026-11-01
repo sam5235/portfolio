@@ -56,6 +56,7 @@
     "title": "Projects & case studies",
     "subtitle": "A collection of work spanning client engagements, freelance contracts, and personal projects.",
     "empty": "No projects in this category yet.",
+    "mergedPrs": "Merged pull requests",
     "filters": {
       "All": "All",
       "Upwork": "Upwork",
