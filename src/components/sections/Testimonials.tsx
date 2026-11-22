@@ -3,6 +3,7 @@ import { Section, SectionHeading } from '../ui/Section'
 import { Reveal } from '../ui/Reveal'
 import { Icon } from '../ui/Icon'
 import { useContent } from '../../content'
+import { resolveAsset } from '../../content/mediaAssets'
 
 function Stars({ count }: { count: number }) {
   return (
@@ -26,29 +27,40 @@ export function Testimonials() {
         align="center"
       />
       <div className="mt-12 grid gap-6 md:grid-cols-2">
-        {testimonials.map((item, i) => (
-          <Reveal key={`${item.name}-${i}`} delay={i * 0.08}>
-            <figure className="relative h-full rounded-2xl border border-ink/10 bg-white p-7 dark:border-white/10 dark:bg-white/3">
-              <Stars count={item.rating} />
-              <blockquote className="relative mt-4 text-base leading-relaxed text-slate-700 dark:text-slate-200">
-                “{item.quote}”
-              </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3">
-                <span className="flex size-11 items-center justify-center rounded-full bg-violet-500 font-semibold text-white">
-                  {item.name.charAt(0)}
-                </span>
-                <span>
-                  <span className="block font-semibold text-ink dark:text-white">
-                    {item.name}
+        {testimonials.map((item, i) => {
+          const logo = resolveAsset(item.logo)
+          return (
+            <Reveal key={`${item.name}-${i}`} delay={i * 0.08}>
+              <figure className="relative h-full rounded-2xl border border-ink/10 bg-white p-7 dark:border-white/10 dark:bg-white/3">
+                <Stars count={item.rating} />
+                <blockquote className="relative mt-4 text-base leading-relaxed text-slate-700 dark:text-slate-200">
+                  “{item.quote}”
+                </blockquote>
+                <figcaption className="mt-6 flex items-center gap-3">
+                  {logo ? (
+                    <img
+                      src={logo}
+                      alt=""
+                      className="size-11 shrink-0 rounded-full"
+                    />
+                  ) : (
+                    <span className="flex size-11 items-center justify-center rounded-full bg-violet-500 font-semibold text-white">
+                      {item.name.charAt(0)}
+                    </span>
+                  )}
+                  <span>
+                    <span className="block font-semibold text-ink dark:text-white">
+                      {item.name}
+                    </span>
+                    <span className="block text-sm text-slate-500 dark:text-slate-400">
+                      {item.title}
+                    </span>
                   </span>
-                  <span className="block text-sm text-slate-500 dark:text-slate-400">
-                    {item.title}
-                  </span>
-                </span>
-              </figcaption>
-            </figure>
-          </Reveal>
-        ))}
+                </figcaption>
+              </figure>
+            </Reveal>
+          )
+        })}
       </div>
     </Section>
   )

@@ -3,8 +3,8 @@
   "role": "Senior Software Engineer",
   "headline": "React · Next.js · Vue · Nuxt · AI Developer",
   "tagline": "I turn creative ideas into robust, scalable web experiences.",
-  "intro": "I'm a passionate, detail-oriented full stack developer with proven expertise building dynamic, responsive, and user-friendly web applications. With a focus on React.js and Vue.js, I transform creative ideas into robust and scalable digital experiences.",
-  "about": "With a keen eye for detail and a passion for delivering quality work, I'm confident handling any development project. I stay up to date with the latest technologies and techniques to deliver exceptional results every time — from front-end architecture and state management to performance and polished UI/UX.",
+  "intro": "UK-based full-stack engineer with 3+ years of experience, using AI-assisted development to ship faster without cutting quality. I've modernised a UN ECA platform handling millions of records and built generative AI products at A2SV.",
+  "about": "With a keen eye for detail and a passion for delivering quality work, I'm confident handling any development project. I stay up to date with the latest technologies and techniques to deliver exceptional results every time, from front-end architecture and state management to performance and polished UI/UX.",
   "location": "London, UK · Remote",
   "email": "samiyahamid111@gmail.com",
   "cvUrl": "/cv.pdf",
@@ -31,17 +31,17 @@
     ]
   },
   "stats": [
-    { "label": "Years experience", "value": "2.5+" },
+    { "label": "Years experience", "value": "3+" },
     { "label": "Projects delivered", "value": "10+" },
     { "label": "Upwork rating", "value": "5.0" },
     { "label": "Job success", "value": "100%" }
   ],
   "whyMe": [
-    "Clean, maintainable code — efficient, scalable, testable, and easy to read.",
-    "Clear communication — prompt responses and updates throughout the project.",
-    "Timely, high-quality delivery — meeting deadlines without compromising quality.",
-    "Client-centric approach — dedicated to understanding your specific requirements.",
-    "Innovative solutions — exploring new technologies for cutting-edge results.",
+    "Clean, maintainable code, efficient, scalable, testable, and easy to read.",
+    "Clear communication, prompt responses and updates throughout the project.",
+    "Timely, high-quality delivery, meeting deadlines without compromising quality.",
+    "Client-centric approach, dedicated to understanding your specific requirements.",
+    "Innovative solutions, exploring new technologies for cutting-edge results.",
     "Strong problem-solving skills to tackle complex requirements."
   ],
   "socials": [

@@ -29,7 +29,6 @@
   },
   "hero": {
     "greeting": "Hi, I'm {{name}}.",
-    "tail": "building delightful web apps.",
     "downloadCv": "Download CV"
   },
   "tech": {
@@ -77,7 +76,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's work together",
-    "subtitle": "Have a project, a role, or just a question? Send a message or book a call — I usually reply within a day.",
+    "subtitle": "Have a project, a role, or just a question? Send a message or book a call, I usually reply within a day.",
     "getInTouch": "Get in touch",
     "findMeOnline": "Find me online",
     "preferToTalkTitle": "Prefer to talk?",

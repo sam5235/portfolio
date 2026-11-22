@@ -72,7 +72,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <button
             type="button"
             onClick={() => setOpenAt(0)}
-            aria-label={`${t('actions.preview')} — ${project.title}`}
+            aria-label={`${t('actions.preview')}, ${project.title}`}
             className="group/preview absolute inset-0 z-10 flex items-center justify-center bg-ink/0 transition-colors duration-300 hover:bg-ink/30"
           >
             <span className="flex size-14 scale-90 items-center justify-center rounded-full bg-white/95 text-ink opacity-0 shadow-lg transition duration-300 group-hover/preview:scale-100 group-hover/preview:opacity-100">
@@ -86,7 +86,7 @@ export function ProjectCard({ project }: { project: Project }) {
           <button
             type="button"
             onClick={() => setDetailsOpen(true)}
-            aria-label={`${t('actions.details')} — ${project.title}`}
+            aria-label={`${t('actions.details')}, ${project.title}`}
             className="absolute inset-0 z-10 bg-ink/0 transition-colors duration-300 hover:bg-ink/30"
           >
             <Icon

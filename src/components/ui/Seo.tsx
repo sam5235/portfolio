@@ -34,7 +34,7 @@ export function Seo({
   const { profile } = useContent()
   const { siteUrl, ogImage, twitter } = profile.seo
 
-  const fullTitle = `${title} — ${profile.name}`
+  const fullTitle = `${title}, ${profile.name}`
   const desc = description ?? profile.intro
   const base = siteUrl.replace(/\/$/, '')
   const url = `${base}${path}`
@@ -83,7 +83,7 @@ export function Seo({
       <meta property="og:image" content={absImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${profile.name} — ${profile.role}`} />
+      <meta property="og:image:alt" content={`${profile.name}, ${profile.role}`} />
       <meta property="og:locale" content="en_US" />
       {type === 'article' && publishedTime && (
         <meta property="article:published_time" content={publishedTime} />

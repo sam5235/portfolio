@@ -12,7 +12,7 @@ const links = [
   { to: '/', key: 'nav.home' },
   { to: '/projects', key: 'nav.projects' },
   { to: '/experience', key: 'nav.experience' },
-  { to: '/blog', key: 'nav.blog' },
+  // { to: '/blog', key: 'nav.blog' },
   ...(HIDE_CONTACT ? [] : [{ to: '/contact', key: 'nav.contact' }]),
 ]
 

@@ -10,8 +10,9 @@ import { Home } from './pages/Home'
 import { Projects } from './pages/Projects'
 import { Experience } from './pages/Experience'
 import { Contact } from './pages/Contact'
-import { Blog } from './pages/Blog'
-import { BlogPost } from './pages/BlogPost'
+// Blog hidden for now; uncomment to restore.
+// import { Blog } from './pages/Blog'
+// import { BlogPost } from './pages/BlogPost'
 import { NotFound } from './pages/NotFound'
 import { HIDE_CONTACT } from './config/site'
 
@@ -23,8 +24,8 @@ const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { path: 'projects', element: <Projects /> },
       { path: 'experience', element: <Experience /> },
-      { path: 'blog', element: <Blog /> },
-      { path: 'blog/:slug', element: <BlogPost /> },
+      // { path: 'blog', element: <Blog /> },
+      // { path: 'blog/:slug', element: <BlogPost /> },
       ...(HIDE_CONTACT ? [] : [{ path: 'contact', element: <Contact /> }]),
       { path: '*', element: <NotFound /> },
     ],
