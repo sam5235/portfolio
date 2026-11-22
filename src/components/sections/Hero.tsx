@@ -51,8 +51,8 @@ export function Hero() {
             {t('hero.greeting', { name: profile.name.split(' ')[0] })}{' '}
             <span className="font-extrabold text-lime-accent-dark">
               {profile.role}
-            </span>{' '}
-            {t('hero.tail')}
+            </span>
+            .
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

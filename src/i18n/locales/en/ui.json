@@ -29,7 +29,6 @@
   },
   "hero": {
     "greeting": "Hi, I'm {{name}}.",
-    "tail": "building delightful web apps.",
     "downloadCv": "Download CV"
   },
   "tech": {
