@@ -1,5 +1,58 @@
 [
   {
+    "slug": "mony",
+    "title": "mony — Personal Finance App",
+    "summary": "A personal finance app for UK users: spending, income, budgets, savings goals and money lent, from your bank’s CSV exports.",
+    "description": "Designed and built end to end with React, TypeScript and Supabase. Every account is isolated by Postgres Row Level Security, and an automated cross-user attack suite proves it. Statements import from Monzo, Revolut, Wise or any CSV, with suggested categories and transfer detection, and foreign-currency entries freeze the day’s exchange rate. Includes a landing page whose live dashboard preview runs on sample data in the browser, data export and account deletion, and privileged operations in an Edge Function.",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "TanStack Query",
+      "Tailwind CSS"
+    ],
+    "category": "Personal",
+    "year": 2026,
+    "featured": true,
+    "kind": "dashboard",
+    "thumbnail": "mony - thumbnail.jpg",
+    "repoUrl": "https://github.com/forty2-labs/mony",
+    "cover": "linear-gradient(135deg, #c7f269 0%, #1b3530 100%)",
+    "media": [
+      {
+        "type": "image",
+        "src": "mony - thumbnail.jpg",
+        "alt": "mony landing page: Your money. Your clarity, with a live dashboard preview on sample data"
+      },
+      {
+        "type": "image",
+        "src": "mony - dashboard light.jpg",
+        "alt": "mony dashboard: net worth, income, expenses, trend chart and category-by-month table"
+      },
+      {
+        "type": "image",
+        "src": "mony - dashboard dark.jpg",
+        "alt": "mony dashboard in dark mode"
+      },
+      {
+        "type": "image",
+        "src": "mony - budgets.jpg",
+        "alt": "mony budgets: monthly limits per category with spending progress"
+      },
+      {
+        "type": "image",
+        "src": "mony - how it works.jpg",
+        "alt": "mony landing page: export a CSV, import and review, see where it goes"
+      },
+      {
+        "type": "image",
+        "src": "mony - pricing.jpg",
+        "alt": "mony pricing: free while in testing, $20 lifetime, custom deployment"
+      }
+    ]
+  },
+  {
     "slug": "expensify-app",
     "title": "Expensify — Open Source Contributor",
     "summary": "Contributing features and fixes to New Expensify, the open-source expense and reporting app.",
