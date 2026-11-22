@@ -4,7 +4,7 @@
       "role": "Open Source Contributor",
       "company": "Expensify",
       "type": "Open Source",
-      "period": "Oct 2026 — Present",
+      "period": "Oct 2026 - Present",
       "location": "Remote",
       "description": "Contributing features and fixes to Expensify/App, the open-source React Native app behind New Expensify (web, iOS, Android, desktop).",
       "highlights": [
@@ -18,7 +18,7 @@
       "role": "Full-Stack Developer",
       "company": "UNECA (UN Economic Commission for Africa)",
       "type": "Contract",
-      "period": "Jan 2025 — Dec 2025",
+      "period": "Jan 2025 - Dec 2025",
       "location": "Remote",
       "description": "Built a composable data-visualization platform for statisticians to create and publish custom dashboards.",
       "highlights": [
@@ -30,13 +30,13 @@
     },
     {
       "role": "Software Engineer (Frontend)",
-      "company": "A2SV — Africa to Silicon Valley",
+      "company": "A2SV, Africa to Silicon Valley",
       "type": "Full-time",
-      "period": "Feb 2023 — Oct 2024",
+      "period": "Feb 2023 - Oct 2024",
       "location": "Hybrid · Addis Ababa",
-      "description": "Frontend developer across the AfroChat product suite — website, AI assistant, Telegram bot, and analytics dashboard.",
+      "description": "Frontend developer across the AfroChat product suite, website, AI assistant, Telegram bot, and analytics dashboard.",
       "highlights": [
-        "Designed and built the AfroChat AI assistant website — responsive and user-friendly.",
+        "Designed and built the AfroChat AI assistant website, responsive and user-friendly.",
         "Built an admin dashboard for usage metrics and system performance.",
         "Shipped an AI assistant chatbot integrated with Telegram for summarizing, organizing, and proofreading."
       ],
@@ -46,7 +46,7 @@
       "role": "Freelancer",
       "company": "Upwork",
       "type": "Freelance",
-      "period": "2023 — Present",
+      "period": "2023 - Present",
       "location": "Remote",
       "description": "Delivering React/Next.js fixes and features for international clients with a perfect rating.",
       "highlights": [

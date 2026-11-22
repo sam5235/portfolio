@@ -78,7 +78,7 @@ export function Footer() {
                 markClassName="rounded-lg border border-white/25"
               />
               <p className="mt-3 max-w-xs text-sm text-violet-100">
-                {profile.role} — {profile.tagline}
+                {profile.role}, {profile.tagline}
               </p>
               <SocialLinks className="mt-5 [&_a]:border-white/30 [&_a]:text-white [&_a:hover]:bg-white [&_a:hover]:text-violet-600" />
             </div>
