@@ -7,7 +7,7 @@ const tabs: { to: string; key: string; icon: IconName }[] = [
   { to: "/", key: "nav.home", icon: "home" },
   { to: "/projects", key: "nav.projects", icon: "layers" },
   { to: "/experience", key: "nav.experience", icon: "briefcase" },
-  { to: "/blog", key: "nav.blog", icon: "book" },
+  // { to: "/blog", key: "nav.blog", icon: "book" },
   ...(HIDE_CONTACT
     ? []
     : [{ to: "/contact", key: "nav.contact", icon: "mail" as IconName }]),
