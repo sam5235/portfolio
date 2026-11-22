@@ -17,6 +17,7 @@
     "featured": true,
     "kind": "dashboard",
     "thumbnail": "mony - thumbnail.jpg",
+    "liveUrl": "https://mony-gray.vercel.app/",
     "repoUrl": "https://github.com/forty2-labs/mony",
     "cover": "linear-gradient(135deg, #c7f269 0%, #1b3530 100%)",
     "media": [
