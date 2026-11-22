@@ -91,6 +91,8 @@ export type Testimonial = {
   name: string
   title: string
   rating: number
+  /** Filename in src/assets/logos/; falls back to the initial when absent. */
+  logo?: string
 }
 
 export type BlogPost = {

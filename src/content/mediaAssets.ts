@@ -1,8 +1,9 @@
-// Resolve project media (images + videos) kept in src/assets/projects/ to
-// hashed, build-optimized URLs. JSON references files by their plain filename;
-// this maps that name to the emitted asset URL. Unknown names resolve to
-// undefined so missing files surface as gaps rather than broken 404s.
-const files = import.meta.glob('../assets/projects/*', {
+// Resolve media (images + videos) kept in src/assets/projects/ and logos in
+// src/assets/logos/ to hashed, build-optimized URLs. JSON references files by
+// their plain filename; this maps that name to the emitted asset URL. Unknown
+// names resolve to undefined so missing files surface as gaps rather than
+// broken 404s.
+const files = import.meta.glob(['../assets/projects/*', '../assets/logos/*'], {
   eager: true,
   query: '?url',
   import: 'default',
